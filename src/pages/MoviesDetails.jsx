@@ -1,7 +1,11 @@
 import { useParams } from "react-router-dom";
 import { apiFactory } from "../api";
 import { useEffect, useState } from "react";
-import { IFrame } from "../components/MoviesList/MoviesList.style";
+import {
+  FullTitle,
+  IFrame,
+  MovieTrailer,
+} from "../components/MoviesList/MoviesList.style";
 
 export const MoviesDetails = (props) => {
   const params = useParams();
@@ -21,9 +25,9 @@ export const MoviesDetails = (props) => {
     }
   }
   return (
-    <div>
-      <div> {movieDetails.fullTitle}</div>
+    <MovieTrailer>
+      <FullTitle> {movieDetails.fullTitle}</FullTitle>
       <IFrame src={movieDetails.linkEmbed} title="MovieTrailer"></IFrame>
-    </div>
+    </MovieTrailer>
   );
 };

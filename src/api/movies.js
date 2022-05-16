@@ -1,6 +1,6 @@
 import { instance } from "./instance";
 
-const apiKey = "k_6710c55y"; // k_9n5qgfid
+const apiKey = "k_9n5qgfid"; //"k_6710c55y"; //
 
 export const movies = () => ({
   getAll: async (searchCriteria) => {
